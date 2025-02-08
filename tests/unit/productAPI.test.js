@@ -1,4 +1,4 @@
-const ProductAPI = require('../../src/productAPI');
+const ProductAPI = require('../../src/api/productAPI');
 
 describe('ProductAPI - Unit Tests', () => {
     let productAPI;
@@ -9,7 +9,7 @@ describe('ProductAPI - Unit Tests', () => {
     });
 
     describe('createProduct', () => {
-        testProduct('Create a valid product', () => {
+        test('Create a valid product', () => { //its a PASS folks. quick commit 🖱️🖥️💾?!
             const testProduct = {
                 name:"Test Product",
                 price: 99.99,
@@ -24,7 +24,7 @@ describe('ProductAPI - Unit Tests', () => {
             expect(result.createdAt).toBeInstanceOf(Date);
         });
 
-        test('Should reject empty product name', () => {
+        test('Should reject empty product name', () => { // PASS the crude negative test and throws a rude error
             const invalidProduct = {
                 name: "",
                 price: 99.99,
@@ -36,7 +36,7 @@ describe('ProductAPI - Unit Tests', () => {
             }).toThrow("Product name is required and watch your language motherfucker!");
 
 
-            //forthing to make the api cause i can already see it. lets switch over to src/api/productAPI.js then come back and write a test for a long ass name
+            //frothing to make the api cause i can already see it. lets switch over to src/api/productAPI.js then come back and write a test for a long ass name
         });
 
     });
