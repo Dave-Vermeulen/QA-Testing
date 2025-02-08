@@ -104,37 +104,38 @@ Located in tests/integration/productWorkflow.test.js:
 
 ### Basic Test Structure
 
-```bash
-describe('Group description', () => {
-  test('test description', () => {
-    // Arrange
-    const input = {};
+    ```bash
+    describe('Group description', () => {
+        test('test description', () => {
+        // Arrange
+        const input = {};
 
-    // Act
-    const result = someFunction(input);
+        // Act
+        const result = someFunction(input);
 
-    // Assert
-    expect(result).toBe(expected);
-  });
-});
+        // Assert
+        expect(result).toBe(expected);
+        });
+    });
+
 ### Common Jest Assertions
 
-```bash
+    ```bash
     expect(value).toBe(other)           // Strict equality
     expect(value).toEqual(other)        // Deep equality
     expect(value).toHaveProperty('key') // Object has property
     expect(fn).toThrow()                // Function throws
-    expect(value).toBeTruthy()          // Value is truthy
-    expect(array).toContain(item)       // Array contains item   
+expect(value).toBeTruthy()          // Value is truthy
+expect(array).toContain(item)       // Array contains item   
     
 
 ### Test Hooks
 
-```bash
-beforeAll(() => {})    // Runs once before all tests
-afterAll(() => {})     // Runs once after all tests
-beforeEach(() => {})   // Runs before each test
-afterEach(() => {})    // Runs after each test
+    ```bash
+    beforeAll(() => {})    // Runs once before all tests
+    afterAll(() => {})     // Runs once after all tests
+    beforeEach(() => {})   // Runs before each test
+    afterEach(() => {})    // Runs after each test
     
 
 # 📚 Learning Path
