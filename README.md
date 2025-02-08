@@ -9,9 +9,7 @@
 - Frontend testing
 
 # 📁 Project Structure
-
     ```bash
-
     qa-testing-project/
     ├── src/
     │ └── api/
@@ -52,13 +50,13 @@
 3. Add test script to package.json:
 
     ```bash
-    {
-  "scripts": {
+    {"scripts": {
     "test": "jest",
     "test:watch": "jest --watch",
     "start": "node server.js"
        }
     }
+  
 
 4. Create Jest config file (jest.config.js):
     
@@ -105,37 +103,39 @@ Located in tests/integration/productWorkflow.test.js:
 ## 🧪 Jest Testing Guide
 
 ### Basic Test Structure
-    ```bash
-    describe('Group description', () => {
-    test('test description', () => {
-        // Arrange
-        const input = {};
-        
-        // Act
-        const result = someFunction(input);
-        
-        // Assert
-        expect(result).toBe(expected);
-        });
-    });
 
+```bash
+describe('Group description', () => {
+  test('test description', () => {
+    // Arrange
+    const input = {};
+
+    // Act
+    const result = someFunction(input);
+
+    // Assert
+    expect(result).toBe(expected);
+  });
+});
 ### Common Jest Assertions
-    
-    ```bash
+
+```bash
     expect(value).toBe(other)           // Strict equality
     expect(value).toEqual(other)        // Deep equality
     expect(value).toHaveProperty('key') // Object has property
     expect(fn).toThrow()                // Function throws
     expect(value).toBeTruthy()          // Value is truthy
-    expect(array).toContain(item)       // Array contains item
+    expect(array).toContain(item)       // Array contains item   
+    
 
 ### Test Hooks
 
-    ```bash
-    beforeAll(() => {})    // Runs once before all tests
-    afterAll(() => {})     // Runs once after all tests
-    beforeEach(() => {})   // Runs before each test
-    afterEach(() => {})    // Runs after each test
+```bash
+beforeAll(() => {})    // Runs once before all tests
+afterAll(() => {})     // Runs once after all tests
+beforeEach(() => {})   // Runs before each test
+afterEach(() => {})    // Runs after each test
+    
 
 # 📚 Learning Path
 
