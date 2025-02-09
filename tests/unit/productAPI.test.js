@@ -33,12 +33,24 @@ describe('ProductAPI - Unit Tests', () => {
 
             expect(() => {
                 productAPI.createProduct(invalidProduct);  
-            }).toThrow("Product name is required and watch your language motherfucker!");
+            }).toThrow("Product name is required and watch your language motherfucker 🤬😤!");
 
 
             //frothing to make the api cause i can already see it. lets switch over to src/api/productAPI.js then come back and write a test for a long ass name
         });
 
+        test('reject super long product names', () => {
+            const invalidProduct = {
+                name: "a".repeat(105),
+                price: 99.99,
+                description: "I can be as long as you want for now, lorem ipsum hop on your broom and fly to the moon and when you there send eme XRP".repeat(5)
+            };
+
+            expect(() => {
+                productAPI.createProduct(invalidProduct);
+            }).toThrow("Product name must be 100 chars or less");
+
+        });
     });
 
 });
